@@ -5,7 +5,7 @@ maakaPay.init({
     approved: "localhost/reponse/approved",
     canceled: "localhost/reponse/approved",
     declined: "localhost/reponse/approved",
-    merchant_key: "afadsfasfdadsf",
+    merchant_key: "your-mechant-key",
     environment: "development"
 })
 
@@ -15,7 +15,7 @@ const test = async () => {
     console.log(await maakaPay.pay({
         currency: "NPR",
         amount: 1,
-        transaction_code: 'asdfasdfasf',
+        transaction_code: '123123123',
         description: "asdfadsfadsfadsf"
     }))
 }
