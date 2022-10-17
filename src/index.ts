@@ -114,7 +114,11 @@ export const pay = async (payObj: IpayObj) => {
             maakaPayUrl = "https://apisandbox.maakapay.com/v1/createOrder";
         }
         const response = await axios.post(maakaPayUrl, paymentObj);
-        return { status: response.status, message: response.statusText };
+        return {
+            status: response.status,
+            message: response.statusText,
+            data: response.data,
+        };
     } catch (error: any) {
         if (error.isAxiosError) {
             return {
